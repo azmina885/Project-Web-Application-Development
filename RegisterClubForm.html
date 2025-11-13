@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RegisterClubForm</title>
+	
+	<style>
+
+    body {
+      background-color: #e9c0c0;
+      color: #8a6046;
+    }
+		
+	header {
+      background-color: #fff;
+      padding: 1px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 50px;
+      width: 90%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+	  
+	  header a {
+		  font-family: "Garet", "Serif";
+		  font-size: 18px;
+		  color: #8a6046;
+		  text-decoration: none;
+	  }
+		
+	footer {
+	  font-family: "alegreya sans sc", "sans-serif";
+	  font-size: 14px;
+	  color: #000;
+      background-color: #f6e9e9;
+      border-radius: 15px;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+		
+	.form-container {
+      background-color: #43b9ea;
+      border-radius: 25px;
+      padding: 50px 80px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+		.a {
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+			color: black;
+		}
+	</style>
+</head>
+<body>
+<header><table width="1287" border="0" cellspacing="3" cellpadding="3">
+  <tbody>
+    <tr align="center">
+      <td width="185" height="77" rowspan="3">
+      <h2><img src="Image/clubLink logo.png" width="179" height="67" alt=""/></h2>
+    </td>
+      <td width="112" rowspan="3">&nbsp;</td>
+      <td width="180" rowspan="3"><a href="ClubLink.html">Home</a></td>
+      <td width="174" rowspan="3"><a href="MainClubs.html">Clubs </a></td>
+      <td width="160" rowspan="3"><a href="leadershipBodies.html">Leadership Bodies</a></td>
+      <td width="160" rowspan="3"><a href="MainEvents.html">Events</a></td>
+      <td width="169" rowspan="3"><a href="allAbout.html">About</a></td>
+    </tr>
+  </tbody>
+</table>
+</header>
+<div><p></p>
+  <p></p>
+  <h1 align="center">Club Registration Form</h1>
+  <form method="post" action="saveRegistration.php" name="regForm">
+    <table width="828" border="0" cellspacing="2" cellpadding="5" align="center" class="form-container">
+      <tbody class="a">
+        <tr>
+          <td width="236" height="46"><label>Student's Name</label></td>
+          <td width="29" align="center">:</td>
+          <td width="525"><input type="text" name="studentName" id="studentName" size="50"></td>
+        </tr>
+        <tr>
+          <td height="46"><label>ID No.</label></td>
+          <td align="center">:</td>
+          <td><label for="textfield"></label>
+            <input type="text" name="id" id="id" size="50"></td>
+        </tr>
+        <tr>
+          <td><label>Program</label></td>
+          <td align="center">:</td>
+          <td><select name="program" id="program" size="4">
+              <option>Diploma in Computer Science</option>
+              <option>Diploma in Coporate Communication</option>
+			  <option>Diploma of Accounting</option>
+              <option>Bachelor of Information Technology (Honours) in Cyber Security</option>
+              <option>Bachelor of Information Technology (Honours) in Computer Application Development</option>
+			  <option>Bachelor of Accounting (Honours)</option>
+			  <option>Bachelor of Communication(Hons) in Corporate Communication</option>
+			  <option>Bachelor of Business Administration (Honours)</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td><label></label>
+            Semester</td>
+          <td align="center">:</td>
+          <td><p>
+              <input type="radio" name="sem" id="sem1" value="Semester 1">
+            Semester 1 <br>
+            <input type="radio" name="sem" id="sem2" value="Semester 2">
+            Semester 2 <br>
+            <input type="radio" name="sem" id="sem3" value="Semester 3">
+            Semester 3 <br>
+			<input type="radio" name="sem" id="sem4" value="Semester 4">
+            Semester 4 <br>
+			<input type="radio" name="sem" id="sem5" value="Semester 5">
+            Semester 5 <br>
+			<input type="radio" name="sem" id="sem6" value="Semester 6">
+            Semester 6<br>
+            <input type="radio" name="sem" id="sem7" value="Semester 7">
+			Semester 7<br>
+			<input type="radio" name="sem" id="sem8" value="Semester 8">
+			Semester 8</p></td>
+		
+        </tr>
+        <tr>
+          <td><label>Phone No.</label></td>
+          <td align="center">:</td>
+          <td><input type="text" name="phoneNo" id="phoneNo" size="50"></td>
+        </tr>
+        <tr>
+          <td><label>Email</label></td>
+          <td align="center">:</td>
+          <td><input type="text" name="email" id="email" size="55"></td>
+        </tr>
+        <tr>
+          <td>Club Interested</td>
+          <td align="center">:</td>
+          <td><label for="select"></label>
+            <select name="club" id="club" size="4">
+			<option>Badminton Club</option>
+            <option>Futsal Club</option>
+			<option>Netball Club</option>
+            <option>Volleyball Club</option>
+            <option>Pencak Silat Club</option>
+			<option>Ruhaniq Islamic Club</option>
+			<option>Persatuan Anak Borneo Club</option>
+			<option>Japanese Culture Club</option>
+			<option>Debates Club</option>
+			<option>Pembimbing & Kerjaya Club</option>
+			<option>Accounting Club</option>
+			<option>Entrepreneurship Club</option>
+			<option>Vocalism Club</option>
+			<option>Akasia Dance Club</option>
+			<option>Anak Teater Club</option>
+			<option>Photography Club</option>
+          </select></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center">&nbsp;</td>
+          <td><input type="submit" name="submit" id="submit" value="Register">
+            &nbsp;&nbsp;&nbsp;
+            <input type="reset" name="reset" id="reset" value="Clear All"></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <p></p>
+  <p></p>
+</div>
+	
+	<footer>
+	  <div>
+	    <table width="1235" height="364" border="0" cellpadding="5" cellspacing="3">
+	      <tbody>
+	        <tr>
+	          <td height="68"><img src="Image/logo UPTM.png" width="152" height="77" alt=""/></td>
+	          <td><img src="Image/clubLink logo.png" width="172" height="70" alt=""/></td>
+	          <td>&nbsp;</td>
+            </tr>
+	        <tr>
+	          <td width="465" height="268"><p><strong>UNIVERSITI POLY-TECH MALAYSIA</strong></p>
+	            <p>Jalan 6/91, Taman Shamelin Perkasa, 56100 Chers, Kuala Lumpur</p>
+	            <p><u>UPTM Location at:</u></p>
+	            <p><a href="https://maps.app.goo.gl/J6FnpzkMTdaNZen76"><img src="Image/LOGO GMAPS.png" width="80" height="63" alt=""/></a></p></td>
+	          <td width="385"><p><strong>FOR MORE DETAILS:</strong></p>
+	            <p>Tel: +6012 5013451</p>
+	            <p>Email: clublink@uptm.edu.my </p>
+	            <p><a href="https://r.search.yahoo.com/_ylt=Awr1TYiB5A5p9AEAoW3jPwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1763793281/RO=10/RU=https://web.whatsapp.com//RK=2/RS=sPh9U3aEDb_eJdMtE4nJy6aUgmc-"><img src="Image/whatsapp.png" width="76" height="70" alt=""/></a><a href="https://r.search.yahoo.com/_ylt=AwrKGR3P5A5pY4ICbBvjPwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1763793359/RO=10/RU=https://web.telegram.org//RK=2/RS=j1mNvVbfPOb03q8mPkc6BspCBqs-"><img src="Image/telegram.png" width="62" height="55" alt=""/></a></p></td>
+	          <td width="343"><p>&nbsp;</p>
+	            <p><strong>STAY CONNECT WITH US:</strong></p>
+	            <p><a href="https://www.facebook.com/"><img src="Image/facebook.png" width="60" height="58" alt=""></a>&nbsp;<a href="https://www.instagram.com/"><img src="Image/instagram.png" width="50" height="52" alt=""/></a></p>
+	            <p> <a href="https://www.linkedin.com/"><img src="Image/linkedln.png" width="66" height="70" alt=""/></a><a href="https://x.com/i/flow/login?redirect_after_login=/home"><img src="Image/x.png" width="54" height="54" alt=""/></a></p>
+	            <p>&nbsp;</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	</footer>
+</body>
+</html>
