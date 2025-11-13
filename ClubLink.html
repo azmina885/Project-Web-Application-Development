@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClubLink | UPTM</title>
+  <style>
+
+    body {
+      background-color: #e9c0c0;
+      color: #8a6046;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 2px 70px;
+      display: flex;
+      align-items: center;
+      border-radius: 50px;
+      width: 90%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+	  
+	  header a {
+		  font-family: "Garet", "Serif";
+		  font-size: 18px;
+		  color: #8a6046;
+		  text-decoration: none;
+	  }
+	  
+	  .profile-dropdown {
+            position: relative;
+            display: inline-block;
+       }
+
+
+      .profile-btn {
+		    background-color: transparent;
+        border: 2px solid #7b4b2a; 
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+	  }
+	  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff2eb;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #8a6046;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+   
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 15px;
+	  font-family: 'Georgia', 'Times New Roman', serif;
+	  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15), -1px -1px 0 #f4c7c3;
+    }
+
+    .hero button {
+	  font-family: "Garet", "Serif";
+      background-color: #8a6046;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #6c4327;
+    }
+
+    .clubs-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .clubs-section h2 {
+	  font-family: "Etna Sans Serif", Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+      font-size: 30px;
+      margin-bottom: 30px;
+      color: #2b1c1c;
+    }
+
+    .clubs-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .club-card {
+      background-color: #fff;
+      width: 220px;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .club-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .club-card h3 {
+	  font-family: "Alice", Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2b1c1c;
+    }
+
+    .club-card p {
+	  font-family: "Alice", Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+      font-size: 0.9rem;
+      color: #5b4a4a;
+      margin-bottom: 15px;
+    }
+
+    .club-card button {
+      background-color: #8b5e3c;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .club-card button:hover {
+      background-color: #6c4327;
+    }
+
+
+    .event-card {
+      display: inline-flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 15px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      gap: 20px;
+    }
+
+    .event-date {
+	  font-family: "allerta stencil",Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+      background-color: #51a9e8;
+      color: #000;
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .event-info {
+	  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+      text-align: left;
+	  color: #000;
+	  font-size: 15px;
+    }
+
+    footer {
+	  font-family: "alegreya sans sc", "sans-serif";
+	  font-size: 14px;
+	  color: #000;
+      background-color: #f6e9e9;
+      border-radius: 15px;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+	  
+  </style>
+</head>
+<body>
+
+  <header>
+    <table width="1287" border="0" cellspacing="3" cellpadding="5">
+  <tbody>
+    <tr align="center">
+      <td width="185" height="80" rowspan="3">
+      <h2><img src="Image/clubLink logo.png" width="179" height="67" alt=""/></h2>
+    </td>
+      <td width="112" rowspan="3">&nbsp;</td>
+      <td width="180" rowspan="3"><a href="ClubLink.html">Home</a></td>
+      <td width="174" rowspan="3"><a href="MainClubs.html">Clubs </a></td>
+      <td width="160" rowspan="3"><a href="leadershipBodies.html">Leadership Bodies</a></td>
+      <td width="160" rowspan="3"><a href="MainEvents.html">Events</a></td>
+      <td width="169" rowspan="3"><a href="allAbout.html">About Us</a></td>
+    </tr>
+    <tr align="center">
+      <td height="57" class="profile-dropdown"><div class="dropdown-content"><a href="frontPage.html">Log Out</a></div>
+        <img src="Image/log.jpg" width="59" height="47" alt=""></td>
+	  </tr>
+  </tbody>
+</table>
+  </header>
+
+  
+  <div class="hero">
+	  <table width="971" border="0" cellspacing="3" cellpadding="5" align="center">
+  <tbody>
+    <tr align="center">
+      <td width="290"><img src="Image/people.png" width="295" height="190" alt=""/></td>
+      <td width="298"> <h1>Stay Active. Get Involved. Join Club Now For More Fun!</h1>
+        <p>&nbsp;</p>
+	    <a href="MainClubs.html"><button>Explore Clubs</button></a></td>
+    </tr>
+  </tbody>
+	  </table>
+  </div>
+
+  <div class="clubs-section">
+    <h2>Featured Clubs</h2>
+    <div class="clubs-container">
+		<table width="1185" border="0" cellspacing="3" cellpadding="5">
+  <tbody>
+    <tr align="center">
+      <td width="288"><div class="club-card"><img src="Image/sports.png" width="93" height="52" alt=""/>
+        <h3>Sports Club</h3>
+        <p>Promoting teamwork, fitness and healthy lifestyle.</p>
+        <p>&nbsp;</p>
+		  <a href="MainClubs.html"><button>More</button></a>
+      </div></td>
+      <td width="287"><div class="club-card"><img src="Image/cultural.png" width="82" height="65" alt=""/>
+        <h3>Cultural Club</h3>
+        <p>Exploring diversity through art, tradition and unity.</p>
+        <p>&nbsp;</p>
+		  <a href="MainClubs.html"><button>More</button></a>
+      </div></td>
+      <td width="289"> <div class="club-card"><img src="Image/academic.png" width="115" height="72" alt=""/>
+        <h3>Academic Club</h3>
+        <p>Engage in learning and growth.</p>
+        <p>&nbsp;</p>
+		  <a href="MainClubs.html"><button>More</button></a>
+      </div></td>
+      <td width="266">  <div class="club-card"><img src="Image/music.png" width="130" height="63" alt=""/>
+        <h3>Arts & Music Club</h3>
+        <p>Express creativity through art, melody and performance.</p>
+        <p>&nbsp;</p>
+		  <a href="MainClubs.html"><button>More</button></a>
+      </div></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+
+ 
+<div class="clubs-section">
+    <h2>Signature Events</h2>
+    <div align="center">
+      <table width="500" border="0" cellspacing="3" cellpadding="5">
+        <tbody>
+          <tr align="center">
+            <td><div class="club-card"><img src="Image/sports.png" width="93" height="52" alt=""/>
+              <h3>Club Carnival</h3>
+              <p>A lively event showcasing student clubs with performance, games and interactive stalls to help students discover new interests and join communities.</p>
+              <p>&nbsp;</p>
+				<a href="MainEvents.html"><button>More</button></a>
+            </div></td>
+            <td><div class="club-card"><img src="Image/sports.png" width="93" height="52" alt=""/>
+              <h3>Recognition Awards</h3>
+              <p>A ceremony honoring students, faculty and clubs for their outstanding achievements and contributions to campus life.</p>
+              <p>&nbsp;</p>
+				<a href="MainEvents.html"><button>More</button></a>
+            </div></td>
+            <td><div class="club-card"><img src="Image/sports.png" width="93" height="52" alt=""/>
+              <h3>Workshop &amp; Seminar</h3>
+              <p>A hands-on session where students learn practical skills and gain-real-world experience from experts. Include of an interactive academic events with outstanding speakers.</p>
+              <p>&nbsp;</p>
+				<a href="MainEvents.html"><button>More</button></a>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+    <div></div>
+    </div>
+  </div>
+	
+	
+  <footer>
+    <div>
+      <table width="1235" height="364" border="0" cellpadding="5" cellspacing="3">
+        <tbody>
+          <tr>
+            <td height="68"><img src="Image/logo UPTM.png" width="152" height="77" alt=""/></td>
+            <td><img src="Image/clubLink logo.png" width="172" height="70" alt=""/></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="465" height="268"><p><strong>UNIVERSITI POLY-TECH MALAYSIA</strong></p>
+              <p>Jalan 6/91, Taman Shamelin Perkasa, 56100 Chers, Kuala Lumpur</p>
+              <p><u>UPTM Location at:</u></p>
+              <p><a href="https://maps.app.goo.gl/J6FnpzkMTdaNZen76"><img src="Image/LOGO GMAPS.png" width="80" height="63" alt=""/></a></p></td>
+            <td width="385"><p><strong>FOR MORE DETAILS:</strong></p>
+              <p>Tel: +6012 5013451</p>
+              <p>Email: clublink@uptm.edu.my </p>
+              <p><a href="https://r.search.yahoo.com/_ylt=Awr1TYiB5A5p9AEAoW3jPwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1763793281/RO=10/RU=https://web.whatsapp.com//RK=2/RS=sPh9U3aEDb_eJdMtE4nJy6aUgmc-"><img src="Image/whatsapp.png" width="76" height="70" alt=""/></a><a href="https://r.search.yahoo.com/_ylt=AwrKGR3P5A5pY4ICbBvjPwx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1763793359/RO=10/RU=https://web.telegram.org//RK=2/RS=j1mNvVbfPOb03q8mPkc6BspCBqs-"><img src="Image/telegram.png" width="62" height="55" alt=""/></a></p></td>
+            <td width="343"><p>&nbsp;</p>
+              <p><strong>STAY CONNECT WITH US:</strong></p>
+              <p><a href="https://www.facebook.com/"><img src="Image/facebook.png" width="60" height="58" alt=""></a>&nbsp;<a href="https://www.instagram.com/"><img src="Image/instagram.png" width="50" height="52" alt=""/></a></p>
+              <p> <a href="https://www.linkedin.com/"><img src="Image/linkedln.png" width="66" height="70" alt=""/></a><a href="https://x.com/i/flow/login?redirect_after_login=/home"><img src="Image/x.png" width="54" height="54" alt=""/></a></p>
+              <p>&nbsp;</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </footer>
+</body>
+</html>
+
